@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Skills Page</title>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Jathin.S</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="works.html">Works</a>
+      <a class="selected" href="skill.html">Skills</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <div class="certi"><p>Certifications</p></div>
+  <div class="slider-container">
+    <div class="arrow-button left arrow-left">
+      <div class="arrow"></div>
+    </div>
+
+    <div class="slider">
+      <div class="slide active">
+        <img src="assets/skillboost (1).png" alt="Badge 1">
+      </div>
+      <div class="slide">
+        <img src="assets/alison.png" alt="Badge 2">
+      </div>
+      <div class="slide">
+        <img src="assets/ibm.png" alt="Badge 3">
+      </div>
+      <div class="slide">
+        <img src="assets/tcs(1).png" alt="Badge 4">
+      </div>
+      
+    </div>
+
+    <div class="arrow-button right arrow-right">
+      <div class="arrow"></div>
+    </div>
+  </div>
+
+ 
+  <div class="container1">
+    <div>
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.80/build/spline-viewer.js"></script>
+<spline-viewer  url="https://prod.spline.design/lJKPkZZ7tIilQvc8/scene.splinecode"></spline-viewer>
+    </div>
+
+    <div class="chat-box">
+      
+      <div class="messages">
+        <h2>Skills & Competencies</h2>
+            <ul class="skills-list">
+              <li>Critical Thinking</li>
+              <li>Team Player</li>
+              <li>Basics of MongoDB</li>
+              <li>Fundamentals of React JS</li>
+              <li>AI Application</li>
+              <li>Problem Solving</li>
+              <li>Collaboration</li>
+              <li>Basics of Python</li>
+            </ul></div>
+      
+      <div class="input-area">
+        
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const leftArrow = document.querySelector('.arrow-left');
+    const rightArrow = document.querySelector('.arrow-right');
+    let current = 0;
+
+    function updateSlides() {
+      slides.forEach((slide, index) => {
+        slide.classList.remove('active');
+        if (index === current) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    leftArrow.addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      updateSlides();
+    });
+
+    rightArrow.addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      updateSlides();
+    });
+  </script>
+
+
+<footer>
+  <div class="socials">
+      <i class='bx bxl-instagram'></i>
+      <i class='bx bxl-twitter'></i>
+      <i class='bx bxl-linkedin-square'></i>
+      <a href="https://github.com/" target="_blank"> <i class="bx bxl-github" ></i></a>
+  </div>
+  <p>Copyright ©2024, All rights reserved.</p>
+</footer>
+</body>
+
+</html>
